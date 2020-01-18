@@ -15,6 +15,8 @@ import Assembly from '../../../assets/images/assembly.svg';
 import HouseAndStay from '../../../assets/images/house.svg';
 import AnythingElse from '../../../assets/images/else.svg';
 
+import PlayStore from '../../../assets/images/appStore.png';
+import AppStore from '../../../assets/images/playStore.png';
 import HiwVideo from '../../../assets/videos/HiwVideo.mp4';
 // import { Player } from "video-react";
 // import ReactPlayer from 'react-player'
@@ -26,6 +28,7 @@ const IconFont = AntIcon.createFromIconfontCN({
 const Icon = ({ item }) => {
   return (
     <div
+      className="hero_cat_list_item"
       style={{
         height: '90px',
         display: 'flex',
@@ -210,13 +213,17 @@ export default class NewHome extends Component {
             <div className="hiw_posttask">
               <figure>
                 <img src={PostTask} alt="post task" />
-                <figcaption>Post task</figcaption>
+                <figcaption>
+                  <Button type="primary">Post task</Button>
+                </figcaption>
               </figure>
             </div>
             <div className="hiw_tasker">
               <figure>
                 <img src={BecomeTasker} alt="becom a tasker" />
-                <figcaption>Becom a tasker</figcaption>
+                <figcaption>
+                  <Button type="primary">Becom a tasker</Button>
+                </figcaption>
               </figure>
             </div>
           </section>
@@ -249,6 +256,12 @@ export default class NewHome extends Component {
           {/* </section>           */}
           <div className="foot_links">
             <ul>
+              <li className="regular-li" style={{ 'font-size': '14px' }}>
+                Account
+              </li>
+              <li className="regular-li" style={{ 'font-size': '14px' }}>
+                SignUp & Login
+              </li>
               <li>Moving in banglore</li>
               <li>House painting in banglore</li>
               <li>Beauty services in banglore</li>
@@ -257,10 +270,30 @@ export default class NewHome extends Component {
               <li>Delivery in banglore</li>
             </ul>
           </div>
-          <div className="foot_app" />
+          <div className="foot_app">
+            <img src={PlayStore} alt="play store" />
+            <img src={AppStore} alt="app store" />
+          </div>
           <div className="foot_social">
-            {' '}
-            <IconFont type="icon-facebook" />
+            <div>We are quite friendly, catch us on </div>
+            <div className="icon_lst">
+              <IconFont
+                style={{ fontSize: '22px', color: '#6C63FF' }}
+                type="icon-facebook"
+              />
+              <IconFont
+                style={{ fontSize: '22px', color: '#6C63FF' }}
+                type="icon-instagram"
+              />
+              <IconFont
+                style={{ fontSize: '22px', color: '#6C63FF' }}
+                type="icon-pintrest"
+              />
+              <IconFont
+                style={{ fontSize: '22px', color: '#6C63FF' }}
+                type="icon-twitter"
+              />
+            </div>
           </div>
           <div className="foot_pic">
             <img src={FooterPic} alt="footer pic" />
